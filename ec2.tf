@@ -21,14 +21,14 @@ resource "aws_instance" "ec2-kube-master" {
     host        = self.public_ip
   }
   provisioner "file" {
-    source = "./scriptmaster.sh"
+    source      = "./scriptmaster.sh"
     destination = "/home/ubuntu/.script.sh"
   }
   provisioner "remote-exec" {
     inline = [
       "cd /home/ubuntu",
       "sh .script.sh",
-      ]
+    ]
   }
 }
 
@@ -55,7 +55,7 @@ resource "aws_instance" "ec2-kube-node" {
     host        = self.public_ip
   }
   provisioner "file" {
-    source = "./scriptnode.sh"
+    source      = "./scriptnode.sh"
     destination = "/home/ubuntu/.script.sh"
   }
 
@@ -63,6 +63,6 @@ resource "aws_instance" "ec2-kube-node" {
     inline = [
       "cd /home/ubuntu",
       "sh .script.sh",
-      ]
+    ]
   }
 }

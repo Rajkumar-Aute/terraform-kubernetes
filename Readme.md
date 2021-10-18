@@ -1,5 +1,5 @@
 The Terraform and Script files are used to build Kubernetes Master and Nodes,
-add your aws credentials to .aws/credentials file with profile name terraform
+add your aws credentials to user/.aws/credentials file with profile name terraform
 and create terraform ssh key.
 clone the repository to local folder and run the terraform script,
 

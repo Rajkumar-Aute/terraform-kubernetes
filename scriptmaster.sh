@@ -65,4 +65,9 @@ echo "========== Kubernetes Cluster Tocken for Nodes to join =========="
 cat kubeclustertocken
 echo "========== Kubernetes Cluster Tocken for Nodes to join =========="
 
+echo "========== added auto complete in bashrc =========="
+echo "source <(kubectl completion bash)" >> ~/.bashrc
+source ~/.bashrc
+
+echo "========== deleting script files =========="
 rm get-docker.sh .script.sh

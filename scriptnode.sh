@@ -38,4 +38,9 @@ sudo apt update
 sudo apt install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 
+echo "========== added auto complete in bashrc =========="
+echo "source <(kubectl completion bash)" >> ~/.bashrc
+source ~/.bashrc
+
+echo "========== deleting script files =========="
 rm get-docker.sh .script.sh

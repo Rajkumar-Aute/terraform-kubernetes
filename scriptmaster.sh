@@ -52,6 +52,11 @@ kubectl get nodes
 echo "========== Install the Weave Net addon =========="
 kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
 
+echo "========== Install the Helm =========="
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
+
 echo "========== list the cluster nodes =========="
 kubectl get nodes
 
@@ -61,9 +66,12 @@ kubectl get pods -A
 echo "========== list the cluster nodes =========="
 kubectl get nodes
 
-echo "========== Kubernetes Cluster Tocken for Nodes to join =========="
-cat kubeclustertocken
-echo "========== Kubernetes Cluster Tocken for Nodes to join =========="
+echo "========== Installing kubeval for yaml validate =========="
+wget https://github.com/instrumenta/kubeval/releases/latest/download/kubeval-linux-amd64.tar.gz
+tar xf kubeval-linux-amd64.tar.gz
+sudo cp kubeval /usr/local/bin
+sudo rm -rf kubeval-linux-amd64.tar.gz
+sudo rm -rf kubeval
 
 echo "========== added auto complete in bashrc =========="
 echo "source <(kubectl completion bash)" >> ~/.bashrc
@@ -71,3 +79,7 @@ source ~/.bashrc
 
 echo "========== deleting script files =========="
 rm get-docker.sh .script.sh
+
+echo "========== Kubernetes Cluster Tocken for Nodes to join =========="
+cat kubeclustertocken
+echo "========== Kubernetes Cluster Tocken for Nodes to join =========="

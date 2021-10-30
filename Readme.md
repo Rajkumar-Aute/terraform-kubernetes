@@ -3,11 +3,11 @@
 and create terraform ssh key in the AWS console.
 
 * create new folder and clone the repository to local folder and run the terraform script,
-'''
-git clone https://github.com/RajkumarAute/terraform-kubernetes.git .
-terraform init
-terraform apply
-'''
+
+  git clone https://github.com/RajkumarAute/terraform-kubernetes.git .
+  terraform init
+  terraform apply
+
 * revise the creation statement then approve for apply process.
 
 ### after build

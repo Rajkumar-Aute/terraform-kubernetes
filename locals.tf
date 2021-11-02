@@ -22,8 +22,9 @@ locals {
   kubelet-api-and-self               = 10250
   kube-scheduler                     = 10259
   kube-controller-manager            = 10257
-  Kubernetes-node-port-services-from = 30000
-  Kubernetes-node-port-services-to   = 32767
+  k8s-node-port-services-from = 30000
+  k8s-node-port-services-to   = 32767
+  k8s-dashboard = 8001
 
 
   // lodals for ec2

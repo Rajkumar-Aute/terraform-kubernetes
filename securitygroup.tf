@@ -71,9 +71,17 @@ resource "aws_security_group" "security-group" {
   ingress {
     cidr_blocks = [local.anyware]
     description = "Kubernetes-node-port-services"
-    from_port   = local.Kubernetes-node-port-services-from
+    from_port   = local.k8s-node-port-services-from
     protocol    = "tcp"
-    to_port     = local.Kubernetes-node-port-services-to
+    to_port     = local.k8s-node-port-services-to
+  }
+
+ ingress {
+    cidr_blocks = [local.anyware]
+    description = "Kubernetes-dashboard"
+    from_port   = local.k8s-dashboard
+    protocol    = "tcp"
+    to_port     = local.k8s-dashboard
   }
 
   egress {

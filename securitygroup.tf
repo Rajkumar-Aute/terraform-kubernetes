@@ -83,6 +83,14 @@ resource "aws_security_group" "security-group" {
     protocol    = "tcp"
     to_port     = local.k8s-dashboard
   }
+# note -  for testing purpose allowed all ports publicly
+  ingress {
+    cidr_blocks = [local.anyware]
+    description = "open all to public"
+    from_port   = 0
+    protocol    = "-1"
+    to_port     = 0
+  }
 
   egress {
     cidr_blocks = [local.anyware]

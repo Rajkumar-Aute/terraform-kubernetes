@@ -17,7 +17,7 @@ resource "aws_instance" "ec2-kube-master" {
   connection {
     type        = "ssh"
     user        = "ubuntu"
-    private_key = file("C:/Users/rajsa/terraform.pem") // provide the ssh key path by creating from AWS Console
+    private_key = file("C:/Users/rajsa/sshkey.pem") // provide the ssh key path by creating from AWS Console
     host        = self.public_ip
   }
   provisioner "file" {
@@ -51,7 +51,7 @@ resource "aws_instance" "ec2-kube-node" {
   connection {
     type        = "ssh"
     user        = "ubuntu"
-    private_key = file("C:/Users/rajsa/terraform.pem") // provide the ssh key path by creating from AWS Console
+    private_key = file("C:/Users/rajsa/sshkey.pem") // provide the ssh key path by creating from AWS Console
     host        = self.public_ip
   }
   provisioner "file" {

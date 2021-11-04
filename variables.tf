@@ -4,8 +4,8 @@
 // variable for Region, this can be changed while running terraform apply -var "region=<required_region>"
 variable "region" {
   type        = string
-  default     = "ap-south-1"
-  description = "Selected Mumbai region"
+  default     = "us-east-1"
+  description = "Selected N-Virginia region"
 }
 
 // variable for instance type

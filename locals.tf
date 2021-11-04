@@ -30,5 +30,5 @@ locals {
   // lodals for ec2
   ec2-node-name   = "ec2-k8s-node-${terraform.workspace}"
   ec2-master-name = "ec2-k8s-master-${terraform.workspace}"
-  ec2-ssh-key     = "terraform"
+  ec2-ssh-key     = "sshkey"
 }

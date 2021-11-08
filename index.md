@@ -2,5 +2,5 @@
 
 ### To download/clone the Kubernetes Sample template below visit github repo
 ```
-https://github.com/Rajkumar-Aute/terraform-kubernetes.git
+git clone https://github.com/Rajkumar-Aute/terraform-kubernetes.git
 ```

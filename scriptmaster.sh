@@ -73,7 +73,7 @@ sudo cp kubeval /usr/local/bin
 sudo rm -rf kubeval-linux-amd64.tar.gz
 sudo rm -rf kubeval
 
-echo "========== added auto complete in bashrc =========="
+echo "========== added auto complete kubectl commends in bashrc =========="
 echo "source <(kubectl completion bash)" >> ~/.bashrc
 source ~/.bashrc
 
